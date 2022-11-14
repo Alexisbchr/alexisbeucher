@@ -10,7 +10,7 @@
             "editor.minimap.enabled": false,
             "liveServer.settings.donotShowInfoMsg": true,
             "explorer.confirmDelete": false,
-            "workbench.colorTheme": "Ayu Mirage",
+            "workbench.colorTheme": "One Monokai",
             "workbench.preferredDarkColorTheme": "Default Light+",
             "workbench.preferredHighContrastColorTheme": "Default Light+",
             "workbench.preferredHighContrastLightColorTheme": "Default Light+",

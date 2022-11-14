@@ -1,0 +1,24 @@
+{
+  "name": "alexisbeucher",
+  "version": "1.0.0",
+  "description": "My portfolio",
+  "main": "index.js",
+  "scripts": {
+    "normal": "sass ./assets/public/sass/style.scss:./assets/public/css/style.css",
+    "minify": "sass ./assets/public/sass/style.scss:./assets/public/css/style.css --style compressed",
+    "watch": "sass ./assets/public/sass/style.scss:./assets/public/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexisbchr/alexisbeucher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexisbchr/alexisbeucher/issues"
+  },
+  "homepage": "https://github.com/Alexisbchr/alexisbeucher#readme",
+  "dependencies": {
+    "sass": "^1.56.1"
+  }
+}

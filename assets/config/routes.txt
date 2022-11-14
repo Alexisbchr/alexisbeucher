@@ -1,3 +1,6 @@
 / HomeController:index
 /blog BlogController:index
 /blog/* BlogController:show
+/admin AdminController:dashboard
+/admin/addcours AdminController:addcours
+/admin/singlecours/* AdminController:singlecours

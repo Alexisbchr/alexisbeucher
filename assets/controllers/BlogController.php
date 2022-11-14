@@ -1,6 +1,6 @@
 <?php
 
-class BlogController
+class BlogController extends AbstractController
 {
     public function index()
     {

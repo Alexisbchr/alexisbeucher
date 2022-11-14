@@ -1,9 +1,11 @@
 <?php
 
-class HomeController
+class HomeController extends AbstractController
 {
     public function index()
     {
-        require "./assets/views/home.phtml";
+        $page = "home";
+        $pageName = "Accueil";
+        require "./assets/views/layout.phtml";
     }
 }
