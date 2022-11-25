@@ -8,15 +8,14 @@ class User
 
     private string $password;
 
-    private tinyint $superadmin;
-
 
     /**
+     * @param int $id
      * @param string $username
      * @param string $password
-     * @param tinyint $superadmin
      */
-    public function __construct(int $id, string $username, string $password, tinyint $superadmin )
+    
+    public function __construct(int $id, string $username, string $password)
     {
         $this->id = $id;
         $this->username = $username;
@@ -67,7 +66,7 @@ class User
     /**
      * @param string $password
      */
-    public function setPassWord(string $password): string
+    public function setPassword(string $password): string
     {
         $this->password = $password;
     }

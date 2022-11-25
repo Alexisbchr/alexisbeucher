@@ -1,0 +1,12 @@
+.cards
+{
+    display: flex;
+    flex-direction: column;
+    width:15%;
+    height:15%;
+    border: 1px solid $primary;
+}
+.cards__ul{
+    display: flex;
+    flex-direction: column;
+}

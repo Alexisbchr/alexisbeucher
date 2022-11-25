@@ -1,0 +1,24 @@
+/////// General ///////
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $secondary;
+    color:$primary;
+    font-family: $secondaryFont;
+}
+ul
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+}
+button
+{
+    cursor: pointer;
+}

@@ -1,14 +1,18 @@
 <?php
 
-class BlogController extends AbstractController
-{
-    public function index()
+    class BlogController extends AbstractController
     {
-        require "./assets/views/blog_index.phtml";
-    }
+        public function index()
+        {
+            $page = "blog_index";
+            $pageName = "blog";
+            require "./assets/views/layout.phtml";
+        }
 
-    public function show(int $id)
-    {
-        require "./assets/views/blog_show.phtml";
+        public function show(int $id)
+        {
+            $page = "blog_index";
+            $pageName = "blog article";
+            require "./assets/views/layout.phtml";
+        }
     }
-}

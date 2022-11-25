@@ -1,0 +1,17 @@
+header
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+nav,
+.header__nav__ul
+{
+    display: flex;
+    align-items: center;
+}
+.header__nav__li > a
+{
+    margin: 10px;
+    color: $primary;
+}

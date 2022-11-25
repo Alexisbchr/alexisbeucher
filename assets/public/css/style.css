@@ -1,5 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Montserrat&display=swap");
 body {
-  background-color: #000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #616161;
+  color: #d4d4d4;
+  font-family: "Hind Madurai", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav,
+.header__nav__ul {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav__li > a {
+  margin: 10px;
+  color: #d4d4d4;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  height: 15%;
+  border: 1px solid #d4d4d4;
+}
+
+.cards__ul {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
