@@ -8,6 +8,7 @@ class Works
     private string $languages;
     private string $website;
     private string $category_id;
+    private string $description;
 
 
     /**
@@ -17,9 +18,10 @@ class Works
      * @param string $languages;
      * @param string $website;
      * @param int $category_id;
+     * @param string $description;
      */
     
-    public function __construct(int $id, string $name, string $customer, string $languages, string $website, int $category_id)
+    public function __construct(int $id, string $name, string $customer, string $languages, string $website, int $category_id, string $description)
     {
         $this->id = $id;
         $this->name = $name;
@@ -27,6 +29,7 @@ class Works
         $this->languages = $languages;
         $this->website = $website;
         $this->category_id = $category_id;
+        $this->description = $description;
     }
     
     /**
@@ -124,5 +127,21 @@ class Works
     public function setCategory_id(int $category_id): int
     {
         $this->category_id = $category_id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param int $description
+     */
+    public function setDescription(int $id): string
+    {
+        $this->description = $description;
     }
 }

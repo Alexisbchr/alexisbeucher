@@ -1,6 +1,8 @@
 <?php
 require './assets/managers/AbstractManager.php';
 require "./assets/controllers/AbstractController.php";
+require "./assets/controllers/AuthentificationController.php";
+require "./assets/controllers/AdminController.php";
 require "./assets/controllers/HomeController.php";
 require "./assets/controllers/WorksController.php";
 require "./assets/controllers/BlogController.php";

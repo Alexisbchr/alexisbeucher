@@ -4,6 +4,9 @@
 /works WorksController:index
 /works/* WorksController:show
 /contact ContactController:index
-/admin AdminController:dashboard
-/admin/addcours AdminController:addcours
-/admin/singlecours/* AdminController:singlecours
+/login AuthentificationController:login
+/logincheck AuthentificationController:logincheck
+/logout AuthentificationController:logout
+/admin AdminController:index
+/admin/works/* WorksController:show
+/admin/addworks WorksController:addWorks
