@@ -9,4 +9,4 @@
 /logout AuthentificationController:logout
 /admin AdminController:index
 /admin/works/* WorksController:show
-/admin/addworks WorksController:addWorks
+/admin/addworks AdminController:addWorks

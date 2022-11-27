@@ -13,6 +13,7 @@ $routes = [];
 
 // Read the routes config file
 $handle = fopen("./assets/config/routes.txt", "r");
+
 if ($handle) { // if the file exists
 
     while (($line = fgets($handle)) !== false) { // read it line by line
