@@ -1,6 +1,7 @@
 .cards {
     width: 400px;
     height:225px;
+
     background-color:  $primaryOpacity;
     -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
     
@@ -10,6 +11,18 @@
     opacity:0.4;
     margin: 0 1em 0 1em;
     padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size: 2em;
+        font-weight: bolder;
+        color:$secondary;
+        align-self: center;
+    }
+    
   }
   .container .cards:hover {
     transform:perspective(800px)       rotateY(0deg);

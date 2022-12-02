@@ -8,8 +8,8 @@
 /logincheck AuthentificationController:logincheck
 /logout AuthentificationController:logout
 /admin AdminController:index
-/admin/works AdminController:allworks
+/admin/works WorksController:allworks
 /admin/works/* WorksController:show
-/admin/addworks AdminController:addworks
-/admin/editworks/* AdminController:editworks
-/admin/deleteworks/* AdminController:deleteworks
+/admin/addworks WorksController:addworks
+/admin/editworks/* WorksController:editworks
+/admin/deleteworks/* WorksController:deleteworks

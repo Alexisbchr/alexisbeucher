@@ -23,10 +23,35 @@
     background: url("../images/bg-2.webp");
     background-position: center;
     background-size: cover;
+
+    display: flex;
+    justify-content: space-around;
+    .first--article{
+
+        width:40%;
+        h1{
+            align-self:flex-start;
+        }
+        >p{
+            width: 100%;
+            margin: 1em 0;
+            padding: 1em 0;
+            border-top: 2px solid $primary ;
+            border-bottom: 2px solid $primary ;
+
+            text-align: justify;
+            line-height: 2em;
+        }
+        .links  {
+            font-weight: bold;
+            align-self: end;
+            margin-right: 2em;
+        }
+        
+    }
 }
 .section--second{
-    background: url("../images/bg-1.jpg");
-    
+    background: url("../images/bg-1.webp");
     background-position: center;
     background-size: cover;
 }

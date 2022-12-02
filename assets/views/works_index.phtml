@@ -1,17 +1,17 @@
 <section class="section--first" id="section--work">
     <article class="first--article works">
     <?php foreach($allWorks as $works): ?>
+        
         <div class="cards belleepoque">
-            <h3><?= $works['name'];?></h3>
-            <ul class="cards__ul">
+            <!-- <ul class="cards__ul">
                 <li class="cards_li"><?= $works['customer'];?></li>
                 <li class="cards_li"><?= $works['languages'];?></li>
                 <li class="cards_li"><a href="<?= $works['website'];?>"><?= $works['website'];?></a></li>
                 <li class="cards_li"><?= $works['category_id'];?></li>
                 <li class="cards_li"><?= $works['description'];?></li>
-            </ul>
-            <button class="cards__button">
-                <a href="/alexisbeucher/works/<?= $works['id'];?>">Découvrir le projet</a>
+            </ul> -->
+            <button class="button-47">
+                <a href="/alexisbeucher/works/<?= $works['id'];?>">Voir plus</a>
             </button>
         </div>
     <?php endforeach; ?>

@@ -1,5 +1,44 @@
 <section class="section--first" id="section--work">
     <article class="first--article works">
-        
+        <form action="/alexisbeucher/contact" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Ajouter un projet</legend>
+                <div class="field">
+                    <label for="name">Nom</label>
+                    <div class="value">
+                        <input type="text" name="name">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="name">Prénom</label>
+                    <div class="value">
+                        <input type="text" name="name">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <div class="value">
+                        <input type="text" name="email">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="category_id">Categorie</label>
+                    <select id="category_id" name="category_id">
+                        <option value="1">FullStack</option>
+                        <option value="2">Front End</option>
+                        <option value="3">Back End</option>
+                    </select>
+                </div>
+                <div class="field">
+                <label for="description">Description</label>
+                    <div class="value">
+                        <input type="text" name="description">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="toolbar">
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
     </article>
 </section>
