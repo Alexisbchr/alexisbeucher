@@ -6,18 +6,22 @@
         {
             $page = "works_index";
             $pageName = "Works";
-            require "./assets/views/layout.phtml";
-
             require './assets/managers/WorksManager.php';
             $worksManager = new WorksManager;
             $allWorks = $worksManager->getAllWorks();
-            include "./assets/views/includes/_allworks.phtml";
+            
+            require "./assets/views/layout.phtml";
+
         }
 
         public function show(int $id)
         {
             $page = "works_show";
             $pageName = "Works Article";
+            
+            require './assets/managers/WorksManager.php';
+            $worksManager = new WorksManager;
+            $work = $worksManager->getWorkById($id);
             require "./assets/views/layout.phtml";
             
         }

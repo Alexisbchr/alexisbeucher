@@ -2,16 +2,29 @@ header
 {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    height: 3em;
+    position: fixed;
+} 
+.nav__header{
+    width:100%;
+    justify-content: space-between;
 }
 nav,
-.header__nav__ul
+.header__nav__ul,
 {
     display: flex;
     align-items: center;
 }
-.header__nav__li > a
+.header__nav__li > a,
+.logo
 {
     margin: 10px;
+    letter-spacing: 1px;
     color: $primary;
+}
+.logo{
+    text-transform:uppercase;
+}
+span{
+    display: none;
 }

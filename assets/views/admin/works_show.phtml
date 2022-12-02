@@ -1,1 +1,23 @@
-<h1>This is a admin works article with id <?= $id ?></h1>
+<section class="section--first" id="section--work">
+    <article class="first--article works">
+        <div class="cards">
+            <h3><?= $work['name'];?></h3>
+            <ul class="cards__ul">
+                <li class="cards_li"><?= $work['customer'];?></li>
+                <li class="cards_li"><?= $work['languages'];?></li>
+                <li class="cards_li"><a href="<?= $work['website'];?>"><?= $work['website'];?></a></li>
+                <li class="cards_li"><?= $work['category_id'];?></li>
+                <li class="cards_li"><?= $work['description'];?></li>
+            </ul>
+            <button class="cards__button">
+                <a href="/alexisbeucher/works/<?= $work['id'];?>">Voir le projet</a>
+            </button>
+            <button class="cards__button">
+                <a href="/alexisbeucher/works/<?= $work['id'];?>">Modifier le projet</a>
+            </button>
+            <button class="cards__button">
+                <a href="/alexisbeucher/works/<?= $work['id'];?>">Supprimer le projet</a>
+            </button>
+        </div>      
+    </article>
+</section>

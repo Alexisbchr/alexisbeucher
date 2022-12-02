@@ -1,4 +1,7 @@
 <?php
+/**
+ * @author : Gaellan
+ */
 
 class Router {
 
@@ -6,54 +9,79 @@ class Router {
     {
         $route = [];
 
-        $routeData = explode("/", $request); // we split the request using the / character
+        $routeData = explode("/", $request);
 
-        $route["path"] = "/".$routeData[1]; // the path is what is after the first /
-
-        if(count($routeData) > 2) // if we have more than one /
+        $route["path"] = "/".$routeData[1];
+        //If we have 2 slugs or more 
+        if(count($routeData) > 2)
         {
-            $route["parameter"] = $routeData[2]; // the parameter is after the second /
+            
+            for ($i=2,$max=count($routeData)-1;$i<=$max;$i++)
+            {
+                // We check if the last slug ...
+                if($i==$max)
+                {
+                    // ... is a numeric value
+                    if(is_numeric($routeData[$i]) || strlen($routeData[$i]) == 1)
+                    { 
+
+                        // if it is, then it is a parameter
+                        $route["parameter"] = $routeData[$i];
+                    }
+                    else
+                    {
+                        // if not, then it is a path and there is no parameter
+                        $route["path"]=$route["path"]."/".$routeData[$i];
+                        $route["parameter"] = null;
+                    }
+                }
+                else
+                {
+                    //if it isn't the last slug, then we add it to the path
+                    $route["path"]=$route["path"]."/".$routeData[$i];
+                }
+            }
         }
         else
         {
-            $route["parameter"] = null; // we don't have a parameter
+            $route["parameter"] = null;
         }
-
+        
         return $route;
     }
 
     public function route(array $routes, string $request)
     {
-        $requestData = $this->parseRequest($request); // we analyze the request and sort it
+        $requestData = $this->parseRequest($request);
 
         $routeFound = false;
 
-        foreach($routes as $route) // we go through the list of routes we built in the autoload
+        foreach($routes as $route)
         {
             $controller = $route["controller"];
             $method = $route["method"];
             $parameter = $route["parameter"];
 
-            if($route["path"] === $requestData["path"]) // if the path exists
+            if($route["path"] === $requestData["path"])
             {
-                if($route["parameter"] && $requestData["parameter"] !== null) // if a parameter was needed and we have one
+                if($route["parameter"] && $requestData["parameter"] !== null)
                 {
                     $routeFound = true;
 
-                    $ctrl = new $controller();
+                    $ctrl = new $controller(); //magic method
                     $ctrl->$method($requestData["parameter"]);
                 }
-                else if(!$route["parameter"] && $requestData["parameter"] === null) // or a parameter was not needed and we don't have one
+                else if(!$route["parameter"] && $requestData["parameter"] === null)
                 {
                     $routeFound = true;
 
                     $ctrl = new $controller();
-                    $ctrl->$method();
-                }
+                    $ctrl->$method($_GET, $_POST);
+                    }
             }
         }
 
-        if(!$routeFound) // anything else will throw an exception telling us the route does not exist
+        if(!$routeFound)
         {
             throw new Exception("Route not found", 404);
         }

@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Works <?= $id ?></title>
-    </head>
-    <body>
-        <h1>This is a works article with id <?= $id ?></h1>
-    </body>
-</html>
+<section class="section--first" id="section--work">
+    <article class="first--article">
+        <h1>Page de présentation du projet</h1>
+        <div class="cards">
+            <h3><?= $work[0]['name'];?></h3>
+            <ul class="cards__ul">
+                <li class="cards_li"><?= $work[0]['customer'];?></li>
+                <li class="cards_li"><?= $work[0]['languages'];?></li>
+                <li class="cards_li"><a href="<?= $work[0]['website'];?>"><?= $work[0]['website'];?></a></li>
+                <li class="cards_li"><?= $work[0]['category_id'];?></li>
+                <li class="cards_li"><?= $work[0]['description'];?></li>
+            </ul>
+            <button class="cards__button">
+                <a href="/alexisbeucher/works/<?= $work[0]['id'];?>">Découvrir le projet</a>
+            </button>
+        </div>
+    </article>
+</section>
+
+        

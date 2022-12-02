@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./assets/public/css/style.css">
+<link rel="stylesheet" href="/alexisbeucher/assets/public/css/style.css">
 <title><?= $pageName ?></title>
 </head>
 <body>
-    <?php require './assets/views/admin/includes/_header.phtml'; ?>
-    <div class="main">
+    <?php require './assets/views/includes/_adm-header.phtml'; ?>
+    <main class="container">
         <?php require './assets/views/admin/'.$page.'.phtml'; ?>
-    </div>
+    </main>
 </body>
 </html>

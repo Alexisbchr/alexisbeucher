@@ -1,5 +1,5 @@
 / HomeController:index
-/blog BlogController:index
+/blog BlogController:index 
 /blog/* BlogController:show
 /works WorksController:index
 /works/* WorksController:show
@@ -8,5 +8,8 @@
 /logincheck AuthentificationController:logincheck
 /logout AuthentificationController:logout
 /admin AdminController:index
+/admin/works AdminController:allworks
 /admin/works/* WorksController:show
-/admin/addworks AdminController:addWorks
+/admin/addworks AdminController:addworks
+/admin/editworks/* AdminController:editworks
+/admin/deleteworks/* AdminController:deleteworks

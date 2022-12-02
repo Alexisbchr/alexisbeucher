@@ -1,12 +1,22 @@
-.cards
-{
-    display: flex;
-    flex-direction: column;
-    width:50%;
-    height:auto;
-    border: 1px solid $primary;
-}
-.cards__ul{
-    display: flex;
-    flex-direction: column;
-}
+.cards {
+    width: 400px;
+    height:225px;
+    background-color:  $primaryOpacity;
+    -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
+    
+    transform-origin:center;
+    transform:perspective(800px) rotateY(25deg);
+    transition:0.5s;
+    opacity:0.4;
+    margin: 0 1em 0 1em;
+    padding: 1em;
+  }
+  .container .cards:hover {
+    transform:perspective(800px)       rotateY(0deg);
+    opacity:1;
+  }
+  .belleepoque{
+    background: url('../images/belleepoque.webp');
+    background-position: center;
+    background-size: cover;
+  }

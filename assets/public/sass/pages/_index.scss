@@ -1,0 +1,32 @@
+.section--first,
+.section--second{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    article{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .works{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.section--first{
+    background: url("../images/bg-2.webp");
+    background-position: center;
+    background-size: cover;
+}
+.section--second{
+    background: url("../images/bg-1.jpg");
+    
+    background-position: center;
+    background-size: cover;
+}

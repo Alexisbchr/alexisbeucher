@@ -6,8 +6,19 @@ body
     color:$primary;
     font-family: $secondaryFont;
 }
-.main{
-    width:100vw;
+.container{
+    width:100%;
+    height: auto;
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 ul
 {
