@@ -1,20 +1,34 @@
-<section class="section--first" id="section--work">
-    <article class="first--article">
-        <h1>Page de présentation du projet</h1>
-        <div class="cards">
-            <h3><?= $work[0]['name'];?></h3>
-            <ul class="cards__ul">
-                <li class="cards_li"><?= $work[0]['customer'];?></li>
-                <li class="cards_li"><?= $work[0]['languages'];?></li>
-                <li class="cards_li"><a href="<?= $work[0]['website'];?>"><?= $work[0]['website'];?></a></li>
-                <li class="cards_li"><?= $work[0]['category_id'];?></li>
-                <li class="cards_li"><?= $work[0]['description'];?></li>
-            </ul>
-            <button class="cards__button">
-                <a href="/alexisbeucher/works/<?= $work[0]['id'];?>">Découvrir le projet</a>
-            </button>
-        </div>
-    </article>
-</section>
-
+<div id="works_show">
+    <section class="section--first">
+        <article class="first--article aside">
+            
+                <ul class="cards__ul">
+                    <span class="work-details">Languages <li class="cards_li"><?= $work[0]['languages'];?></li></span>
+                    <span class="work-details">Catégorie <li class="cards_li"><?= $work[0]['category_id'];?></li></span>
+                    <span class="work-details">Description <li class="cards_li"><?= $work[0]['description'];?></li></span>
+                </ul>
+        </article>
+        <article class="first--article second--article">
+        <h1><?= $work[0]['name'];?></h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptatibus mollitia velit cupiditate aliquid. 
+                Qui necessitatibus unde, quas fugit consequuntur, sint, ipsa perferendis quasi neque iusto temporibus quod dicta 
+                eaque dolorem eveniet libero velit. Molestias nam saepe officiis cum distinctio perspiciatis nobis obcaecati 
+                doloremque possimus ut dolor consequuntur magnam id, voluptas ad placeat reiciendis aut eos minima? Tempora, 
+                amet error ducimus debitis aspernatur ipsum aperiam quaerat neque inventore, ea aut accusantium pariatur saepe 
+                vitae cumque! Est natus magni architecto corporis! Quos necessitatibus, sed aperiam pariatur esse porro autem 
+                dolorem, error nesciunt, quasi dicta minus qui. Dolore exercitationem deleniti eum debitis.</p>
+            <a href="/alexisbeucher/works/<?= $work[0]['website'];?>" class="links underline">Visiter le site</a>
+            <nav>
+                <a href="#page-2"><i class="fa-solid fa-arrow-down fa-2xl"></i></a>
+            </nav>
+            </article>
         
+    </section>
+    <!-- <section class="section--second" id="page-2">
+        <article class="workscreen grayscale">
+                <img src="/alexisbeucher/assets/public/images/belleepoque-lessons.webp" 
+                alt="Capture d'écran du site belle epoque"
+                width="60%">
+        </article>
+    </section> -->
+</div>

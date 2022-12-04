@@ -6,7 +6,9 @@ body
     color:$primary;
     font-family: $secondaryFont;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .container{
     width:100%;
     height: auto;
@@ -21,6 +23,9 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 .grayscale {
     filter: grayscale(100%);
@@ -29,6 +34,7 @@ body
 
 h1,
 h2{
+    margin: 1em 0;
     font-weight: bold;
 }
 

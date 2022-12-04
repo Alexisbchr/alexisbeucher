@@ -1,26 +1,12 @@
 <section class="section--first" id="section--work">
     <article class="first--article works">
-    <?php
-    foreach($allWorks as $works):
-    ?>
-        <div class="cards">
-            <h3><?= $works['name'];?></h3>
-            <ul class="cards__ul">
-                <li class="cards_li"><?= $works['customer'];?></li>
-                <li class="cards_li"><?= $works['languages'];?></li>
-                <li class="cards_li"><a href="<?= $works['website'];?>"><?= $works['website'];?></a></li>
-                <li class="cards_li"><?= $works['category_id'];?></li>
-                <li class="cards_li"><?= $works['description'];?></li>
-            </ul>
-            <button class="cards__button">
-                <a href="/alexisbeucher/admin/works/<?= $works['id'];?>">Voir le projet</a>
-            </button>
-            <button class="cards__button">
-                <a href="/alexisbeucher/admin/editworks/<?= $works['id'];?>">Modifier le projet</a>
-            </button>
-            <button class="cards__button">
-                <a href="/alexisbeucher/admin/deleteworks/<?= $works['id'];?>">Supprimer le projet</a>
-            </button>
+    <?php foreach($allWorks as $works): ?>
+        <div class="cards belleepoque">
+            <div class="footer--cards">
+                <a href="/alexisbeucher/admin/works/<?= $works['id'];?>" class="underline">Voir plus</a>
+                <a href="/alexisbeucher/admin/editworks/<?= $works['id'];?>" class="underline">Modifier le projet</a>
+                <a href="/alexisbeucher/admin/deleteworks/<?= $works['id'];?>" class="underline">Supprimer le projet</a>
+            </div>
         </div>
     <?php endforeach; ?>
     </article>

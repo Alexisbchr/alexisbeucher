@@ -10,19 +10,25 @@
     transition:0.5s;
     opacity:0.4;
     margin: 0 1em 0 1em;
-    padding: 1em;
-
+    
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: end;
+    .footer--cards{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height:2.2em;
+        background-color: $secondaryOpacity;
+    }
     h1{
         font-size: 2em;
         font-weight: bolder;
         color:$secondary;
         align-self: center;
     }
-    
+
   }
   .container .cards:hover {
     transform:perspective(800px)       rotateY(0deg);

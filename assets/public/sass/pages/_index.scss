@@ -7,7 +7,7 @@
     align-items: center;
     article{
         width: 100%;
-        height: 100%;
+        height: 80%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -18,7 +18,6 @@
         flex-direction: row;
     }
 }
-
 .section--first{
     background: url("../images/bg-2.webp");
     background-position: center;
@@ -49,9 +48,5 @@
         }
         
     }
-}
-.section--second{
-    background: url("../images/bg-1.webp");
-    background-position: center;
-    background-size: cover;
+    
 }
