@@ -13,3 +13,4 @@
 /admin/addworks WorksController:addworks
 /admin/editworks/* WorksController:editworks
 /admin/deleteworks/* WorksController:deleteworks
+/admin/addimage ImagesController:addimage
