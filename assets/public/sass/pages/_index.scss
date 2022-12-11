@@ -16,6 +16,7 @@
     .works{
         display: flex;
         flex-direction: row;
+        margin-top: 200px;
     }
 }
 .section--first{
@@ -24,10 +25,33 @@
     background-size: cover;
 
     display: flex;
-    justify-content: space-around;
+    aside{
+        width: 20%;
+        height:70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        ul,li{
+            margin: 0 0 10px;
+            width: 100%;
+            float: left;
+        }
+        li{
+            height: 2.3em;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 2px;
+            font-size: 0.9em;
+            >i{
+                margin-right: 10px;
+            }
+        }
+    }
     .first--article{
-
-        width:40%;
+        height: 70%;
+        width:55%;
+        margin-left: 1.5em;
         h1{
             align-self:flex-start;
         }
@@ -35,8 +59,8 @@
             width: 100%;
             margin: 1em 0;
             padding: 1em 0;
-            border-top: 2px solid $primary ;
-            border-bottom: 2px solid $primary ;
+            border-top: solid 1px $primaryOpacity ;
+            border-bottom: solid 1px $primaryOpacity;
 
             text-align: justify;
             line-height: 2em;
@@ -44,6 +68,7 @@
         .links  {
             font-weight: bold;
             align-self: end;
+            margin-top: 1em;
             margin-right: 2em;
         }
         

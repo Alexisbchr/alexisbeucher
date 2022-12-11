@@ -9,7 +9,8 @@ class Works
     private string $website;
     private string $category_id;
     private string $description;
-
+    private string $realisation;
+    private string $information;
 
     /**
      * @param int $id;
@@ -19,9 +20,11 @@ class Works
      * @param string $website;
      * @param int $category_id;
      * @param string $description;
+     * @param string $realisation;
+     * @param string $information;
      */
     
-    public function __construct(int $id, string $name, string $customer, string $languages, string $website, int $category_id, string $description)
+    public function __construct(int $id, string $name, string $customer, string $languages, string $website, int $category_id, string $description, string $realisation , string $information)
     {
         $this->id = $id;
         $this->name = $name;
@@ -30,6 +33,8 @@ class Works
         $this->website = $website;
         $this->category_id = $category_id;
         $this->description = $description;
+        $this->realisation = $realisation;
+        $this->information = $information;
     }
     
     /**
@@ -143,5 +148,37 @@ class Works
     public function setDescription(int $id): string
     {
         $this->description = $description;
+    }
+    
+    /**
+     * @return string
+     */
+    public function getRealisation(): string
+    {
+        return $this->realisation;
+    }
+
+    /**
+     * @param string $realisation
+     */
+    public function setRealisation(string $realisation): string
+    {
+        $this->realisation = $realisation;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInformation(): string
+    {
+        return $this->realisation;
+    }
+
+    /**
+     * @param string $information
+     */
+    public function setInformation(string $information): string
+    {
+        $this->information = $information;
     }
 }

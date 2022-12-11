@@ -1,16 +1,22 @@
-<section class="section--first" id="section--work">
-    <article class="first--article works">
-    <?php foreach($allWorks as $works): ?>
-        <div class="cards belleepoque">
-            <div class="footer--cards">
-                <a href="/alexisbeucher/admin/works/<?= $works['id'];?>" 
-                class="underline">Voir plus</a>
-                <a href="/alexisbeucher/admin/editworks/<?= $works['id'];?>" 
-                class="underline">Modifier le projet</a>
-                <a href="/alexisbeucher/admin/deleteworks/<?= $works['id'];?>" 
-                class="underline">Supprimer le projet</a>
+<div id="admin">
+    <section class="section--first">
+        <article class="first--article works">
+        <?php foreach($allWorks as $works): ?>
+            <?php
+                $url = $worksManager->getUrlByImageId($works['image_id']);
+            ?>
+            <div class="cards ">
+                <img src="<?= $url; ?>" alt="ezezeze" width="100%">
+                <div class="footer--cards">
+                    <a href="/alexisbeucher/admin/works/<?= $works['id'];?>" 
+                    class="underline">Voir plus</a>
+                    <a href="/alexisbeucher/admin/editworks/<?= $works['id'];?>" 
+                    class="underline">Modifier le projet</a>
+                    <a href="/alexisbeucher/admin/deleteworks/<?= $works['id'];?>" 
+                    class="underline">Supprimer le projet</a>
+                </div>
             </div>
-        </div>
-    <?php endforeach; ?>
-    </article>
-</section>
+        <?php endforeach; ?>
+        </article>
+    </section>    
+</div>

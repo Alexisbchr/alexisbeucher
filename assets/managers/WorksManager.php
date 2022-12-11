@@ -21,27 +21,63 @@ class WorksManager extends AbstractManager
         $query->execute($parameters);
         $work = $query->fetchAll(PDO::FETCH_ASSOC);
         return $work;
+	} 
+    public function getUrlByImageId(int $image_id) : string
+	{
+        $db=$this->db;
+        $query = $db->prepare('SELECT url FROM image_works WHERE image_works.id=:image_id');
+        $parameters = [
+        'image_id' => $image_id
+        ];
+        $query->execute($parameters);
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        $url = $result['url'];
+        return $url;
 	}
-    public function addWorks(string $name, string $customer, string $languages, string $website, string $category_id, string $description) : void
+    public function addWorks(string $name, string $customer, string $languages, string $website, 
+        string $category_id, string $description, int $imageWorkId, string $realisation, string $information) : void
     {
         $db=$this->db;
-        $query = $db->prepare('INSERT INTO works (name, customer, languages, website, category_id, description)
-            VALUES (:name , :customer, :languages, :website, :category_id, :description)');
+        $query = $db->prepare('INSERT INTO works (name, customer, languages, website, category_id, description, image_id, realisation, information)
+            VALUES (:name , :customer, :languages, :website, :category_id, :description, :imageWorkId, :realisation, :information)');
         $parameters = [
             'name' => $name,
             'customer' => $customer,
             'languages' => $languages,
             'website' => $website,
             'category_id' => $category_id,
-            'description' => $description
+            'description' => $description,
+            'imageWorkId' => $imageWorkId,
+            'realisation' => $realisation,
+            'information' => $information
         ];
         $query->execute($parameters);
         return;
     }
-    public function editWorks(int $id, string $name, string $customer, string $languages, string $website, string $category_id, string $description) : void
+
+    public function addImageWorks(string $file_name,string $url,string $alt) : ?int
     {
         $db=$this->db;
-        $query = $db->prepare('UPDATE works SET id=:id, name=:name, customer=:customer, languages=:languages, website=:website, category_id=:category_id, description=:description WHERE id=:id');
+        $query = $db->prepare('INSERT INTO image_works (file_name, url, alt)
+            VALUES (:file_name , :url, :alt)');
+        $parameters = [
+            'file_name' => $file_name,
+            'url' => $url,
+            'alt' => $alt
+        ];
+        $query->execute($parameters);
+        // on récupère l'id insérée
+        $id = $this->db->lastInsertId();
+        return $id;
+    }
+
+    public function editWorks(int $id, string $name, string $customer, string $languages, 
+        string $website, string $category_id, string $description, string $realisation, string $information) : void
+    {
+        $db=$this->db;
+        $query = $db->prepare('UPDATE works SET id=:id, name=:name, customer=:customer, 
+        languages=:languages, website=:website, category_id=:category_id, description=:description, 
+        realisation=:realisation, information=:information WHERE id=:id');
         $parameters = [
             'id' => $id,
             'name' => $name,
@@ -49,7 +85,9 @@ class WorksManager extends AbstractManager
             'languages' => $languages,
             'website' => $website,
             'category_id' => $category_id,
-            'description' => $description
+            'description' => $description,
+            'realisation' => $realisation,
+            'information' => $information,
         ];
         $query->execute($parameters);
         return;
@@ -57,7 +95,6 @@ class WorksManager extends AbstractManager
 
     public function deleteWorkById(int $id): void
 	{
-        var_dump($id);
 		$db=$this->db;
 		$query = $db->prepare('DELETE FROM works WHERE id=:id');
 		$parameters = [

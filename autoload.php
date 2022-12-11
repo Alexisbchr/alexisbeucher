@@ -7,6 +7,7 @@ require "./assets/controllers/HomeController.php";
 require "./assets/controllers/WorksController.php";
 require "./assets/controllers/BlogController.php";
 require "./assets/controllers/ContactController.php";
+require "./assets/services/FileUploader.php";
 require "./assets/services/Router.php";
 
 $routes = [];

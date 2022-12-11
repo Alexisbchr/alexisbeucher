@@ -8,7 +8,84 @@
                     <span class="work-details">Description <li class="cards_li"><?= $work[0]['description'];?></li></span>
                 </ul>
         </article>
-        <article class="first--article second--article">
+        <div class="tabs">
+      <div
+        role="tablist"
+        aria-label="tabs component"
+        class="tabs-btn-container"
+      >
+        <button
+          role="tab"
+          aria-controls="panel-1"
+          id="tab-1"
+          type="button"
+          aria-selected="true"
+          tabindex="0"
+          class="tab active-tab underline"
+        >
+          Présentation
+        </button>
+        <button
+          role="tab"
+          aria-controls="panel-2"
+          id="tab-2"
+          type="button"
+          aria-selected="false"
+          tabindex="-1"
+          class="tab underline"
+        >
+          La réalisation du site
+        </button>
+        <button
+          role="tab"
+          aria-controls="panel-3"
+          id="tab-3"
+          type="button"
+          aria-selected="false"
+          tabindex="-1"
+          class="tab underline"
+        >
+          Informations 
+        </button>
+      </div>
+      <div
+        id="panel-1"
+        role="tabpanel"
+        tabindex="0"
+        aria-labelledby="tab-1"
+        class="tab-content active-tab-content"
+      >
+        <p>
+        <?= $work[0]['description'];?>
+        </p>
+      </div>
+
+      <div
+        id="panel-2"
+        role="tabpanel"
+        tabindex="0"
+        aria-labelledby="tab-2"
+        class="tab-content"
+      >
+        <p>
+        <?= $work[0]['description'];?>
+        </p>
+      </div>
+
+      <div
+        id="panel-3"
+        role="tabpanel"
+        tabindex="0"
+        aria-labelledby="tab-3"
+        class="tab-content"
+      >
+        <p>
+            <?= $work[0]['description'];?>
+        </p>
+      </div>
+    </div>
+
+        <!-- <article class="first--article second--article">
         <h1><?= $work[0]['name'];?></h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptatibus mollitia velit cupiditate aliquid. 
                 Qui necessitatibus unde, quas fugit consequuntur, sint, ipsa perferendis quasi neque iusto temporibus quod dicta 
@@ -21,7 +98,7 @@
             <nav>
                 <a href="#page-2"><i class="fa-solid fa-arrow-down fa-2xl"></i></a>
             </nav>
-            </article>
+            </article> -->
         
     </section>
     <!-- <section class="section--second" id="page-2">

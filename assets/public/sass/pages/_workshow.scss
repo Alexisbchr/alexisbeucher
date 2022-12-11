@@ -10,6 +10,7 @@
             }
             .aside{
                 width: 30%;
+                margin: 0 0 0 3em;
             }
             .second--article{
                 width: 70%;
@@ -19,20 +20,7 @@
             .second--article {
                 
                 align-items: flex-start;
-                h1{
-                    padding: 1em 0;
-                }
-                .work-screenshot{
-                    width: 100%;
-                    height: 100%;
-        
-                    background: no-repeat url("../images/belleepoque.webp");
-                    background-position: center;
-                    background-size: contain;
-        
-                    opacity: 50%;
-                    
-                }
+                
                 .work-name{
                     width: 100%;
                     border-bottom: 2px solid $primary;
@@ -52,7 +40,8 @@
                 }
                 .work-details{
                     display: flex;
-                    justify-content: space-between;
+                    text-align: justify;
+                    padding: 0em 0em 1em 1em;
                 }
                 .links{
                     margin-right: 0;

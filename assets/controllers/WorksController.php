@@ -10,7 +10,6 @@
             require './assets/managers/WorksManager.php';
             $worksManager = new WorksManager;
             $allWorks = $worksManager->getAllWorks();
-            
             require "./assets/views/layout.phtml";
 
         }
@@ -68,6 +67,11 @@
                     && isset($_POST['website']) && !empty($_POST['website'])
                     && isset($_POST['category_id']) && !empty($_POST['category_id'])
                     && isset($_POST['description']) && !empty($_POST['description'])
+                    && isset($_FILES['image']) && $_FILES['image']['size'] != 0
+                    && isset($_POST['alt']) && !empty($_POST['alt'])
+                    && isset($_POST['realisation']) && !empty($_POST['realisation'])
+                    && isset($_POST['information']) && !empty($_POST['information'])
+
     
                 )
                 {
@@ -77,12 +81,20 @@
                     $website = $this->clean_input($_POST["website"]);
                     $category_id = $this->clean_input($_POST["category_id"]);
                     $description = $this->clean_input($_POST["description"]);
-    
+                    $file_name = $this->clean_input($_FILES["image"]['name']);
+                    $file_name = $this->clean_input($_POST["name"]);
+                    $alt = $this->clean_input($_POST["alt"]);
+                    $realisation = $this->clean_input($_POST["realisation"]);
+                    $information = $this->clean_input($_POST["information"]);
+
                     require './assets/managers/WorksManager.php';
                     $worksManager = new WorksManager;
-                    $work = $worksManager->addWorks($name, $customer, $languages, $website, $category_id, $description);
+                    $uploader = new FileUploader();
+                    $images = $uploader->upload($_FILES['image']);
+                    $imageWorkId = $worksManager->addImageWorks($images->getFileName(), "/alexisbeucher".$images->getUrl(), $alt);
+                    $work = $worksManager->addWorks($name, $customer, $languages, $website, $category_id, $description, $imageWorkId, $realisation, $information);
                     header('Location: /alexisbeucher/admin/works');
-                    exit();
+                    exit();  
                 }
                 
                 require "./assets/views/admin/layout.phtml";
@@ -119,6 +131,8 @@
                     && isset($_POST['website']) && !empty($_POST['website'])
                     && isset($_POST['category_id']) && !empty($_POST['category_id'])
                     && isset($_POST['description']) && !empty($_POST['description'])
+                    && isset($_POST['realisation']) && !empty($_POST['realisation'])
+                    && isset($_POST['information']) && !empty($_POST['information'])
     
                 )
                 {
@@ -130,10 +144,12 @@
                     $website = $this->clean_input($_POST["website"]);
                     $category_id = $this->clean_input($_POST["category_id"]);
                     $description = $this->clean_input($_POST["description"]);
+                    $realisation = $this->clean_input($_POST["realisation"]);
+                    $information = $this->clean_input($_POST["information"]);
     
                     require_once './assets/managers/WorksManager.php';
                     $worksManager = new WorksManager;
-                    $work = $worksManager->editWorks($id, $name, $customer, $languages, $website, $category_id, $description);
+                    $work = $worksManager->editWorks($id, $name, $customer, $languages, $website, $category_id, $description, $realisation, $information);
                     exit();
                 }
                 

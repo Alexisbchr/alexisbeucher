@@ -3,27 +3,20 @@
 class Images
 {
     private int $id;
-    private string $name;
     private string $file_name;
-    private string $file_type;
     private string $url;
     private string $alt;
 
     /**
      * @param int $id
-     * @param string $name
      * @param string $file_name
-     * @param string $file_type
      * @param string $url
      * @param string $alt
      */
     
-    public function __construct(int $id, string $name, string $file_name, string $file_type, string $url, string $alt)
+    public function __construct(string $file_name, string $url, string $alt)
     {
-        $this->id = $id;
-        $this->name = $name;
         $this->file_name = $file_name;
-        $this->file_type = $file_type;
         $this->url = $url;
         $this->alt = $alt;
     
@@ -45,23 +38,6 @@ class Images
         $this->id = $id;
     }
     
-
-    /**
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param string $name
-     */
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
-
     /**
      * @return string
      */
@@ -77,23 +53,6 @@ class Images
     {
         $this->file_name = $file_name;
     }
-    
-        /**
-     * @return string
-     */
-    public function getFileType(): string
-    {
-        return $this->file_type;
-    }
-
-    /**
-     * @param string $file_type
-     */
-    public function setFiletype(string $file_type): void
-    {
-        $this->file_type = $file_type;
-    }
-
     /**
      * @return string
      */

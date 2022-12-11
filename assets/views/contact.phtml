@@ -1,44 +1,31 @@
-<section class="section--first" id="section--work">
-    <article class="first--article works">
-        <form action="/alexisbeucher/contact" method="post" enctype="multipart/form-data">
-            <fieldset>
-                <legend>Ajouter un projet</legend>
-                <div class="field">
-                    <label for="name">Nom</label>
-                    <div class="value">
-                        <input type="text" name="name">
+<section class="section--first" id="contact">
+    <?php require './assets/views/includes/_aside.phtml'; ?>
+    <article class="first--article">
+        <div class="formulaire">
+            <form action="/alexisbeucher/postcontact" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>vos coordonnées</legend>
+                    <div class="field">
+                        <label for="inputName">Votre nom</label>
+                        <div class="value">
+                            <input type="text" name="name" id="inputName" required>
+                        </div>
                     </div>
-                </div>
-                <div class="field">
-                    <label for="name">Prénom</label>
-                    <div class="value">
-                        <input type="text" name="name">
+                    <div class="field">
+                        <label for="inputEmail">Email</label>
+                        <div class="value">
+                            <input type="text" name="email" id="inputEmail" required>
+                        </div>
                     </div>
+                </fieldset>
+                <fieldset>
+                        <legend>Votre message</legend>
+                        <textarea name="message" id="query" required ></textarea>
+                </fieldset>
+                <div class="toolbar">
+                    <button type="submit" class="button-47 underline">Envoyer</button>
                 </div>
-                <div class="field">
-                    <label for="email">Email</label>
-                    <div class="value">
-                        <input type="text" name="email">
-                    </div>
-                </div>
-                <div class="field">
-                    <label for="category_id">Categorie</label>
-                    <select id="category_id" name="category_id">
-                        <option value="1">FullStack</option>
-                        <option value="2">Front End</option>
-                        <option value="3">Back End</option>
-                    </select>
-                </div>
-                <div class="field">
-                <label for="description">Description</label>
-                    <div class="value">
-                        <input type="text" name="description">
-                    </div>
-                </div>
-            </fieldset>
-            <div class="toolbar">
-                <button type="submit">Envoyer</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </article>
 </section>

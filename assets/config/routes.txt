@@ -4,6 +4,7 @@
 /works WorksController:index
 /works/* WorksController:show
 /contact ContactController:index
+/postcontact ContactController:postcontact
 /login AuthentificationController:login
 /logincheck AuthentificationController:logincheck
 /logout AuthentificationController:logout
