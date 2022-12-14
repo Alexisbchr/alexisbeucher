@@ -4,7 +4,7 @@
             
                 <ul class="cards__ul">
                     <span class="work-details">Languages <li class="cards_li"><?= $work[0]['languages'];?></li></span>
-                    <span class="work-details">Catégorie <li class="cards_li"><?= $work[0]['category_id'];?></li></span>
+                    <span class="work-details">Catégorie <li class="cards_li"><?= $work[0]['category_name'];?></li></span>
                     <span class="work-details">Description <li class="cards_li"><?= $work[0]['description'];?></li></span>
                 </ul>
         </article>
@@ -68,7 +68,7 @@
         class="tab-content"
       >
         <p>
-        <?= $work[0]['description'];?>
+        <?= $work[0]['realisation'];?>
         </p>
       </div>
 
@@ -80,7 +80,7 @@
         class="tab-content"
       >
         <p>
-            <?= $work[0]['description'];?>
+            <?= $work[0]['information'];?>
         </p>
       </div>
     </div>

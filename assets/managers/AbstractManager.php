@@ -8,8 +8,8 @@ abstract class AbstractManager
     {
         $this->db = new PDO(
         	'mysql:host=localhost;port=3306;dbname=alexisbeucher;charset=utf8',
-			'root',
-			''
+            'root',
+            ''
 		);
     }
 
@@ -20,4 +20,9 @@ abstract class AbstractManager
     }
 }
 
-?>
+// 'mysql:host=u350390533_alexisbeuchert;port=3306;dbname=alexisbeucher;charset=utf8',
+// 'u350390533_alexis',
+// 'Klorane3578*'
+// 'mysql:host=localhost;port=3306;dbname=alexisbeucher;charset=utf8',
+// 'root',
+// ''

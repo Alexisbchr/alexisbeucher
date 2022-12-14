@@ -13,7 +13,7 @@ class WorksManager extends AbstractManager
     public function getWorkById(int $id) : array
 	{
         $db=$this->db;
-        $query = $db->prepare('SELECT works.*,category_works.category_name FROM works INNER JOIN category_works
+        $query = $db->prepare('SELECT works.*,category_works.category_name FROM works JOIN category_works
         ON works.category_id=category_works.id WHERE works.id=:id');
         $parameters = [
         'id' => $id
@@ -34,6 +34,32 @@ class WorksManager extends AbstractManager
         $url = $result['url'];
         return $url;
 	}
+    public function getAltByImageId(int $image_id) : string
+	{
+        $db=$this->db;
+        $query = $db->prepare('SELECT alt FROM image_works WHERE image_works.id=:image_id');
+        $parameters = [
+        'image_id' => $image_id
+        ];
+        $query->execute($parameters);
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        $alt = $result['alt'];
+        return $alt;
+	}
+    public function getCategoryByImageId(int $image_id) : string
+	{
+        $db=$this->db;
+        $query = $db->prepare('SELECT category_name FROM category_works WHERE image_works.id=:image_id');
+        $parameters = [
+        'image_id' => $image_id
+        ];
+        $query->execute($parameters);
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        // var_dump($result);
+        $category = $result['category_name'];
+        return $category;
+	}
+    
     public function addWorks(string $name, string $customer, string $languages, string $website, 
         string $category_id, string $description, int $imageWorkId, string $realisation, string $information) : void
     {
@@ -75,9 +101,7 @@ class WorksManager extends AbstractManager
         string $website, string $category_id, string $description, string $realisation, string $information) : void
     {
         $db=$this->db;
-        $query = $db->prepare('UPDATE works SET id=:id, name=:name, customer=:customer, 
-        languages=:languages, website=:website, category_id=:category_id, description=:description, 
-        realisation=:realisation, information=:information WHERE id=:id');
+        $query = $db->prepare('UPDATE works SET id=:id, name=:name, customer=:customer, languages=:languages, website=:website, category_id=:category_id, description=:description, realisation=:realisation, information=:information WHERE id=:id');
         $parameters = [
             'id' => $id,
             'name' => $name,

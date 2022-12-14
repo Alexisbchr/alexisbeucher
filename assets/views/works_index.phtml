@@ -3,9 +3,10 @@
     <?php foreach($allWorks as $works): ?>
         <?php
             $url = $worksManager->getUrlByImageId($works['image_id']);
+            $alt = $worksManager->getAltByImageId($works['image_id']);
         ?>
         <div class="cards ">
-            <img src="<?= $url; ?>" alt="ezezeze" width="100%">
+            <img src="<?= $url; ?>" alt="<?= $alt ?>" width="100%">
             <div class="footer--cards">
                 <a href="/alexisbeucher/works/<?= $works['id'];?>" class="underline">Voir plus</a>
                 <a href="<?= $works['website'];?>" class="underline">Visiter</a>
