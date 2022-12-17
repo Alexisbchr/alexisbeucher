@@ -1,5 +1,16 @@
-<section class="section--first" id="section--work">
-    <article class="first--article works">
-        
-    </article>
+<section class="section--first" id="blog">
+    <?php foreach($articles as $article): ?>
+    <?php
+        $url = $blogManager->getUrlByImageId($article['image_id']);
+        $alt = $blogManager->getAltByImageId($article['image_id']);
+    ?>
+        <article class="first--article">
+        <div class="news">
+            <img src="<?= $url; ?>" alt="<?= $alt ?>" width="100%">
+            <div class="footer--cards">
+                <a href="/alexisbeucher/blog/<?= $article['id'];?>" class="underline">Voir plus</a>
+            </div>
+        </div>
+    </article>  
+    <?php endforeach; ?>
 </section>

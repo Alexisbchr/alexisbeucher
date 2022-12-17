@@ -1,0 +1,44 @@
+<div id="admin">
+    <section class="section--first">
+        <article class="first--article">
+            <form action="/alexisbeucher/admin/addarticles" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Ajouter un article</legend>
+                    <div class="field">
+                        <label for="title">Title</label>
+                        <div class="value">
+                            <input type="text" name="title">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="content">Content</label>
+                        <div class="value">
+                            <input type="text" name="content">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="timestamp">Date</label>
+                        <div class="value">
+                        <input type="date" name="timestamp" id="timestamp">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="image">Choisir une photo</label>
+                        <div class="value">
+                            <input type="file" accept="image/png, image/jpeg, image/webp" name="image">
+                        </div>
+                    </div>
+                    <div class="field">
+                    <label for="alt">alt</label>
+                        <div class="value">
+                            <input type="text" name="alt">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="toolbar">
+                    <button type="submit">Creer l'article</button>
+                </div>
+            </form>
+        </article>
+    </section>  
+</div>

@@ -1,17 +1,15 @@
 <section class="section--first" id="section--work">
-    <article class="first--article works">
-        <div class="cards">
-            <h3><?= $works['name'];?></h3>
+    <?php require './assets/views/includes/_aside.phtml'; ?>
+    <article class="first--article">
+        <div>
+            <h3><?= $articles[0]['title'];?></h3>
             <ul class="cards__ul">
-                <li class="cards_li"><?= $works['customer'];?></li>
-                <li class="cards_li"><?= $works['languages'];?></li>
-                <li class="cards_li"><a href="<?= $works['website'];?>"><?= $works['website'];?></a></li>
-                <li class="cards_li"><?= $works['category_id'];?></li>
-                <li class="cards_li"><?= $works['description'];?></li>
+                <li class="cards_li"><?= $articles[0]['content'];?></li>
+                <li class="cards_li"><?= $articles[0]['timestamp'];?></li>
             </ul>
-            <button class="cards__button">
-                <a href="/alexisbeucher/works/<?= $works['id'];?>">Découvrir le projet</a>
-            </button>
+            <div class="footer--cards">
+                <a href="/alexisbeucher/works/<?= $articles[0]['id'];?>" class="underline">Découvrir le projet</a>
+            </div>
         </div>    
     </article>
 </section>

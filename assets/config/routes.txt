@@ -14,4 +14,8 @@
 /admin/addworks WorksController:addworks
 /admin/editworks/* WorksController:editworks
 /admin/deleteworks/* WorksController:deleteworks
-/admin/addimage ImagesController:addimage
+/admin/blog BlogController:allarticles
+/admin/blog/* WorksController:show
+/admin/addarticles BlogController:addarticles
+/admin/editarticles/* BlogController:editarticles
+/admin/deletearticles/* BlogController:deletearticles
