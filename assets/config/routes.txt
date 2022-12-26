@@ -15,7 +15,7 @@
 /admin/editworks/* WorksController:editworks
 /admin/deleteworks/* WorksController:deleteworks
 /admin/blog BlogController:allarticles
-/admin/blog/* WorksController:show
+/admin/blog/* BlogController:singlearticle
 /admin/addarticles BlogController:addarticles
 /admin/editarticles/* BlogController:editarticles
 /admin/deletearticles/* BlogController:deletearticles

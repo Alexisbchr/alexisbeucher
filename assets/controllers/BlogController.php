@@ -16,6 +16,7 @@
 
         public function show(int $id)
         {
+            
             $page = "blog_show";
             $pageName = "blog article";
 
@@ -25,7 +26,28 @@
             
             require "./assets/views/layout.phtml";
         }
-        
+
+        public function singlearticle(int $id)
+        {
+            if(isset($_SESSION['user']) && $_SESSION['user'] !== null){
+
+                $page = "singlearticle";
+                $pageName = "blog article";
+
+                require './assets/managers/BlogManager.php';
+                $blogManager = new BlogManager;
+                $articles = $blogManager->getArticlesById($id);
+                require "./assets/views/admin/layout.phtml";
+
+            }
+            else
+            {
+
+                header('Location: login');
+                exit;
+
+            }
+        }
         public function allarticles()
         {
 
@@ -38,7 +60,6 @@
                 $blogManager = new BlogManager;
                 $allArticles = $blogManager->getAllArticles();
                 require "./assets/views/admin/layout.phtml";
-                require "./assets/views/includes/_adm-allworks.phtml";
             }
             else{
 
@@ -104,11 +125,11 @@
             {
                 
                 $page = "editarticles";
-                $pageName = "Editer un projet";
+                $pageName = "Editer un article";
 
                 require_once './assets/managers/BlogManager.php';
                 $blogManager = new BlogManager;
-                $work = $blogManager->getArticlesById($id);
+                $articles = $blogManager->getArticlesById($id);
 
                 if (
 

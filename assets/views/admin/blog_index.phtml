@@ -1,5 +1,18 @@
 <section class="section--first">
     <article class="first--article">
-        
+        <?php foreach($allArticles as $article): ?>
+        <?php
+            $url = $blogManager->getUrlByImageId($article['image_id']);
+            $alt = $blogManager->getAltByImageId($article['image_id']);
+        ?>
+            <article class="first--article">
+            <div class="news">
+                <img src="<?= $url; ?>" alt="<?= $alt ?>" width="100%">
+                <div class="footer--cards">
+                    <a href="/alexisbeucher/admin/blog/<?= $article['id'];?>" class="underline">Voir plus</a>
+                </div>
+            </div>
+        </article>  
+        <?php endforeach; ?>
     </article>
 </section>

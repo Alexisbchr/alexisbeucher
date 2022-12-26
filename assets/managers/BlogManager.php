@@ -74,11 +74,12 @@ class BlogManager extends AbstractManager
         $id = $this->db->lastInsertId();
         return $id;
     }
-    public function editArticle(string $title, string $content, string $timestamp) : void
+    public function editArticles(int $id, string $title, string $content, string $timestamp) : void
     {
         $db=$this->db;
         $query = $db->prepare('UPDATE blog SET id=:id, title=:title, content=:content, timestamp=:timestamp WHERE id=:id');
         $parameters = [
+            'id' => $id,
             'title' => $title,
             'content' => $content,
             'timestamp' => $timestamp
