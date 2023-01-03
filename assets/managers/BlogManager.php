@@ -97,4 +97,16 @@ class BlogManager extends AbstractManager
 		$query->execute($parameters);
         
 	}
+    public function getLastNews() : array
+	{
+			$db=$this->db;
+			$query = $db->prepare
+			('SELECT * FROM `blog`
+				ORDER BY `blog`.`id`  DESC
+				LIMIT 1'
+			);
+			$query->execute();
+			$lastNews = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $lastNews;
+	}
 }

@@ -127,4 +127,17 @@ class WorksManager extends AbstractManager
 		$query->execute($parameters);
         
 	}
+
+    public function getLastWorks() : array
+	{
+			$db=$this->db;
+			$query = $db->prepare
+			('SELECT * FROM `works`
+				ORDER BY `works`.`id`  DESC
+				LIMIT 1'
+			);
+			$query->execute();
+			$lastWorks = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $lastWorks;
+	}
 }

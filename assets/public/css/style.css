@@ -144,10 +144,12 @@ button {
 
 aside {
   width: 20%;
-  height: 70%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-right: solid 1px rgba(212, 212, 212, 0.5490196078);
+  margin-right: 10em;
 }
 aside ul, aside li {
   margin: 0 0 10px;
@@ -213,7 +215,6 @@ nav,
   justify-content: center;
   width: 100%;
   padding-left: 4em;
-  border-left: solid 1px rgba(212, 212, 212, 0.5490196078);
   color: #d4d4d4;
 }
 
@@ -460,6 +461,7 @@ select:-webkit-autofill:focus {
 
 .underline {
   position: relative;
+  margin: 1px;
 }
 
 .underline::before {
@@ -597,10 +599,6 @@ select:-webkit-autofill:focus {
   display: flex;
 }
 .section--first aside {
-  width: 20%;
-  height: 70%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 .section--first aside ul, .section--first aside li {

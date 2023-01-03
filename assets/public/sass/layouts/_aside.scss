@@ -1,9 +1,11 @@
 aside{
     width: 20%;
-    height:70%;
+    height:auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-right: solid 1px rgba(212, 212, 212, 0.5490196078);
+    margin-right: 10em;
     ul,li{
         margin: 0 0 10px;
         width: 100%;
