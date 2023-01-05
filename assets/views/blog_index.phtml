@@ -1,16 +1,20 @@
 <section class="section--first" id="blog">
+<?php require './assets/views/includes/_aside.phtml'; ?>
     <?php foreach($articles as $article): ?>
-    <?php
-        $url = $blogManager->getUrlByImageId($article['image_id']);
-        $alt = $blogManager->getAltByImageId($article['image_id']);
-    ?>
-        <article class="first--article">
-        <div class="news">
-            <img src="<?= $url; ?>" alt="<?= $alt ?>" width="100%">
-            <div class="footer--cards">
-                <a href="/alexisbeucher/blog/<?= $article['id'];?>" class="underline">Voir plus</a>
-            </div>
-        </div>
-    </article>  
+        <?php
+            $url = $blogManager->getUrlByImageId($article['image_id']);
+            $alt = $blogManager->getAltByImageId($article['image_id']);
+        ?>
+            
+            <article class="first--article">
+                <div class="news">
+                    <ul class="cards__ul">
+                    <h1><?= $articles[0]['title'];?></h1>   
+                        <li class="cards_li"><?= $articles[0]['timestamp'];?></li>
+                        <li class="cards_li"><?= $articles[0]['content'];?></li>
+                    </ul>
+                </div>
+            </article>
+
     <?php endforeach; ?>
 </section>

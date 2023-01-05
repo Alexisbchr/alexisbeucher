@@ -7,9 +7,10 @@ abstract class AbstractManager
     function __construct()
     {
         $this->db = new PDO(
-        	'mysql:host=localhost;port=3306;dbname=alexisbeucher;charset=utf8',
-            'root',
-            ''
+        	
+        'mysql:host=145.14.156.129;port=3306;dbname=u350390533_alexisbeucher;charset=utf8',
+        'u350390533_alexis',
+        'AccesDB12*'
 		);
     }
 
@@ -20,9 +21,9 @@ abstract class AbstractManager
     }
 }
 
-// 'mysql:host=u350390533_alexisbeuchert;port=3306;dbname=alexisbeucher;charset=utf8',
+// 'mysql:host=u350390533_alexisbeucher;port=3306;dbname=alexisbeucher;charset=utf8',
 // 'u350390533_alexis',
-// 'Klorane3578*'
+// 'AccesDB12*'
 // 'mysql:host=localhost;port=3306;dbname=alexisbeucher;charset=utf8',
 // 'root',
 // ''

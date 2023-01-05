@@ -91,9 +91,9 @@
                     $worksManager = new WorksManager;
                     $uploader = new FileUploader();
                     $images = $uploader->upload($_FILES['image']);
-                    $imageWorkId = $worksManager->addImageWorks($images->getFileName(), "/alexisbeucher".$images->getUrl(), $alt);
+                    $imageWorkId = $worksManager->addImageWorks($images->getFileName(), "/".$images->getUrl(), $alt);
                     $work = $worksManager->addWorks($name, $customer, $languages, $website, $category_id, $description, $imageWorkId, $realisation, $information);
-                    header('Location: /alexisbeucher/admin/works');
+                    header('Location: /admin/works');
                     exit();  
                 }
                 
