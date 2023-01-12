@@ -4,8 +4,13 @@ aside{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 1em;
     // border-left: solid 1px rgba(212, 212, 212, 0.5490196078);
     // margin-left: 10em;
+    >span{
+        text-align: center;
+    padding: 1em 0;
+    }
     ul,li{
         // margin: 0 0 10px;
         width: 100%;

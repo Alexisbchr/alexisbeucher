@@ -9,7 +9,7 @@
         align-items: center;
         color: #F2F2F2;
         background-color: rgba(0, 0, 0, 0.267);
-        align-items: center;
+        justify-content: space-around;
     }
     .nav__header{
         display: flex;
@@ -20,7 +20,6 @@
         display: flex;
     }
     .logo {
-        margin: 10px;
         letter-spacing: 1px;
         color: $primary;
     }
@@ -103,7 +102,7 @@
     .section--first{
         background: url("../images/bg-2.webp");
         background-position: center;
-        background-size: cover;
+        background-size: auto;
         background-attachment: scroll;
         display: flex;
         aside{
@@ -141,7 +140,8 @@
             }
         }
         .first--article{
-            width: 90%;
+            width: 90%;    padding: 1em;
+            margin: 1em;
             h1{
                 align-self:center;
             }
@@ -163,6 +163,7 @@
 
     #blog{
         .first--article{
+            border: none;
             .news{    
                 width: 100%;
                 border-bottom: 1px solid $primaryOpacity;
@@ -179,10 +180,35 @@
     }
 
     #contact{
+        .first--article{
+            padding: 1em;
+            margin: 1em;
+        }
         .formulaire{
             padding-left: 0;
         }
         
+    }
+    #works{
+        .works{
+            width: 90%;
+            border:none;
+            margin-bottom: 60px;
+            margin-top: 0;
+
+            .cards{
+                .footer--cards{
+                    display: flex;
+                    justify-content: center;
+                    >a{
+                        font-size: 1em;
+                        font-weight: bold;
+                        text-align: center;
+                        margin: 1em 1em;
+                    }
+                }
+            }
+        }
     }
     #works_show{
         .section--first {

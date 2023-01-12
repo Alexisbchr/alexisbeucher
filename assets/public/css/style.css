@@ -64,7 +64,7 @@ table {
     align-items: center;
     color: #F2F2F2;
     background-color: rgba(0, 0, 0, 0.267);
-    align-items: center;
+    justify-content: space-around;
   }
   .nav__header {
     display: flex;
@@ -75,7 +75,6 @@ table {
     display: flex;
   }
   .logo {
-    margin: 10px;
     letter-spacing: 1px;
     color: #d4d4d4;
   }
@@ -147,7 +146,7 @@ table {
   .section--first {
     background: url("../images/bg-2.webp");
     background-position: center;
-    background-size: cover;
+    background-size: auto;
     background-attachment: scroll;
     display: flex;
   }
@@ -187,6 +186,8 @@ table {
   }
   .section--first .first--article {
     width: 90%;
+    padding: 1em;
+    margin: 1em;
   }
   .section--first .first--article h1 {
     align-self: center;
@@ -202,6 +203,9 @@ table {
     font-weight: bold;
     align-self: center;
   }
+  #blog .first--article {
+    border: none;
+  }
   #blog .first--article .news {
     width: 100%;
     border-bottom: 1px solid rgba(212, 212, 212, 0.5490196078);
@@ -214,8 +218,28 @@ table {
     padding: 0.5em 0em;
     margin: 0.5em 0em;
   }
+  #contact .first--article {
+    padding: 1em;
+    margin: 1em;
+  }
   #contact .formulaire {
     padding-left: 0;
+  }
+  #works .works {
+    width: 90%;
+    border: none;
+    margin-bottom: 60px;
+    margin-top: 0;
+  }
+  #works .works .cards .footer--cards {
+    display: flex;
+    justify-content: center;
+  }
+  #works .works .cards .footer--cards > a {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    margin: 1em 1em;
   }
   #works_show .section--first {
     display: flex;
@@ -416,6 +440,11 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 1em;
+}
+aside > span {
+  text-align: center;
+  padding: 1em 0;
 }
 aside ul, aside li {
   width: 100%;
@@ -465,7 +494,6 @@ aside li > i {
   height: 24px;
   cursor: pointer;
   position: relative;
-  left: 140px;
 }
 
 .burger span {
@@ -513,148 +541,279 @@ aside li > i {
   background-color: rgba(255, 255, 255, 0);
   border: none;
   color: #d4d4d4;
+  font-size: 1em;
+  font-weight: bold;
 }
 .button-47 a {
   color: #d4d4d4;
 }
 
-.formulaire {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-left: 4em;
-  color: #d4d4d4;
+@media (min-width: 992px) {
+  table {
+    width: 100%;
+    max-height: 60vh;
+  }
+  tr, td {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    text-align: center;
+  }
+  label {
+    font-weight: bold;
+  }
+  .formulaire {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-left: 4em;
+    color: #d4d4d4;
+  }
+  form {
+    width: 100%;
+    color: #d4d4d4;
+  }
+  .toolbar {
+    text-align: center;
+  }
+  fieldset {
+    margin: 2em 0;
+    border-color: #d4d4d4;
+  }
+  legend {
+    text-align: center;
+    font-size: 1.3em;
+    width: 80%;
+    text-transform: uppercase;
+    margin: 1em;
+  }
+  .field {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+  }
+  .field label {
+    width: 30%;
+  }
+  .field .value {
+    width: 80%;
+    margin-right: 3%;
+  }
+  .field input {
+    width: 100%;
+  }
+  input:focus {
+    outline: none !important;
+    border-bottom: 20px solid;
+    border-color: #719ECE;
+  }
+  textarea:focus {
+    background-color: rgba(255, 255, 255, 0);
+    outline: none !important;
+    border-bottom: 4px solid;
+    border-color: #719ECE;
+  }
+  label {
+    padding: 0;
+  }
+  input[type=text],
+  input[type=password],
+  input[type=search],
+  input[type=email],
+  input[type*=date],
+  select,
+  object,
+  option,
+  textarea {
+    color: #d4d4d4;
+    display: inline-block;
+    margin: 0.5em 0;
+    padding: 0.3em;
+    border: 0;
+    border-bottom: 1px solid #d4d4d4;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  input[type=text]:focus,
+  input[type=password]:focus,
+  input[type=search]:focus,
+  input[type=email]:focus,
+  input[type*=date]:focus,
+  select:focus,
+  textarea:focus {
+    outline: none !important;
+    border-bottom: 3px solid;
+    border-color: #d4d4d4;
+  }
+  object > option:focus {
+    outline: none !important;
+    border-bottom: 3px solid;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: #d4d4d4;
+  }
+  select,
+  textarea {
+    width: 100%;
+    color: #d4d4d4;
+  }
+  textarea {
+    display: block;
+    color: #d4d4d4;
+    background-color: rgba(255, 255, 255, 0);
+    min-height: 10em;
+  }
+  #query {
+    resize: vertical;
+  }
+  /*////////////////// AUTOCOMPLETE //////////////////*/
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border-bottom: 3px solid;
+    border-color: #d4d4d4;
+    -webkit-text-fill-color: #d4d4d4;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(29, 29, 29, 0) inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 }
-
-form {
-  width: 100%;
-  color: #d4d4d4;
+@media (max-width: 992px) {
+  table {
+    width: 100%;
+    max-height: 60vh;
+  }
+  tr, td {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    text-align: center;
+  }
+  .formulaire {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-left: 4em;
+    color: #d4d4d4;
+  }
+  form {
+    width: 100%;
+    color: #d4d4d4;
+  }
+  .toolbar {
+    text-align: center;
+  }
+  fieldset {
+    margin: 2em 0;
+    border-color: #d4d4d4;
+  }
+  legend {
+    text-align: center;
+    font-size: 1.3em;
+    width: 80%;
+    text-transform: uppercase;
+    margin: 1em;
+  }
+  .field {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5em;
+  }
+  .field label {
+    width: 100%;
+    text-align: center;
+  }
+  .field .value {
+    width: 100%;
+  }
+  .field input {
+    width: 100%;
+  }
+  input:focus {
+    outline: none !important;
+    border-bottom: 20px solid;
+    border-color: #719ECE;
+  }
+  textarea:focus {
+    background-color: rgba(255, 255, 255, 0);
+    outline: none !important;
+    border-bottom: 4px solid;
+    border-color: #719ECE;
+  }
+  label {
+    font-weight: bold;
+  }
+  input[type=text],
+  input[type=password],
+  input[type=search],
+  input[type=email],
+  input[type*=date],
+  select,
+  object,
+  option,
+  textarea {
+    color: #d4d4d4;
+    display: inline-block;
+    margin: 0.5em 0;
+    padding: 0.3em;
+    border: 0;
+    border-bottom: 1px solid #d4d4d4;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  input[type=text]:focus,
+  input[type=password]:focus,
+  input[type=search]:focus,
+  input[type=email]:focus,
+  input[type*=date]:focus,
+  select:focus,
+  textarea:focus {
+    outline: none !important;
+    border-bottom: 3px solid;
+    border-color: #d4d4d4;
+  }
+  object > option:focus {
+    outline: none !important;
+    border-bottom: 3px solid;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: #d4d4d4;
+  }
+  select,
+  textarea {
+    width: 100%;
+    color: #d4d4d4;
+  }
+  textarea {
+    display: block;
+    color: #d4d4d4;
+    background-color: rgba(255, 255, 255, 0);
+    min-height: 10em;
+  }
+  #query {
+    resize: vertical;
+  }
+  /*////////////////// AUTOCOMPLETE //////////////////*/
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border-bottom: 3px solid;
+    border-color: #d4d4d4;
+    -webkit-text-fill-color: #d4d4d4;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(29, 29, 29, 0) inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 }
-
-.toolbar {
-  text-align: center;
-}
-
-fieldset {
-  margin: 2em 0;
-  border-color: #d4d4d4;
-}
-
-legend {
-  text-align: center;
-  font-size: 1.3em;
-  width: 80%;
-  text-transform: uppercase;
-  margin: 1em;
-}
-
-.field {
-  display: flex;
-  align-items: center;
-  padding: 0.5em;
-}
-
-.field label {
-  width: 30%;
-}
-
-.field .value {
-  width: 80%;
-  margin-right: 3%;
-}
-
-.field input {
-  width: 100%;
-}
-
-input:focus {
-  outline: none !important;
-  border-bottom: 20px solid;
-  border-color: #719ECE;
-}
-
-textarea:focus {
-  background-color: rgba(255, 255, 255, 0);
-  outline: none !important;
-  border-bottom: 4px solid;
-  border-color: #719ECE;
-}
-
-label {
-  padding: 0;
-}
-
-input[type=text],
-input[type=password],
-input[type=search],
-input[type=email],
-input[type*=date],
-select,
-object,
-option,
-textarea {
-  color: #d4d4d4;
-  display: inline-block;
-  margin: 0.5em 0;
-  padding: 0.3em;
-  border: 0;
-  border-bottom: 1px solid #d4d4d4;
-  background-color: rgba(255, 255, 255, 0);
-}
-
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=search]:focus,
-input[type=email]:focus,
-input[type*=date]:focus,
-select:focus,
-textarea:focus {
-  outline: none !important;
-  border-bottom: 3px solid;
-  border-color: #d4d4d4;
-}
-
-object > option:focus {
-  outline: none !important;
-  border-bottom: 3px solid;
-  background-color: rgba(255, 255, 255, 0);
-  border-color: #d4d4d4;
-}
-
-select,
-textarea {
-  width: 100%;
-  color: #d4d4d4;
-}
-
-textarea {
-  display: block;
-  color: #d4d4d4;
-  background-color: rgba(255, 255, 255, 0);
-  min-height: 10em;
-}
-
-#query {
-  resize: vertical;
-}
-
-/*////////////////// AUTOCOMPLETE //////////////////*/
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border-bottom: 3px solid;
-  border-color: #d4d4d4;
-  -webkit-text-fill-color: #d4d4d4;
-  -webkit-box-shadow: 0 0 0px 1000px rgba(29, 29, 29, 0) inset;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
 @media (min-width: 992px) {
   .tabs {
     max-width: 800px;
@@ -664,7 +823,6 @@ select:-webkit-autofill:focus {
   }
   .tabs-btn-container {
     display: flex;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2431372549);
   }
   .tab {
     border: none;
@@ -712,52 +870,51 @@ select:-webkit-autofill:focus {
     opacity: 1;
   }
 }
-.cards {
-  min-width: 450px;
-  max-height: 300px;
-  background-color: rgba(212, 212, 212, 0.5490196078);
-  -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2666666667));
-  transform-origin: center;
-  transform: perspective(800px) rotateY(25deg);
-  transition: 0.5s;
-  opacity: 0.4;
-  margin: 0 1em 0 1em;
-  display: flex;
-  justify-content: space-around;
-  align-items: end;
+@media (min-width: 992px) {
+  .cards {
+    min-width: 450px;
+    max-height: 300px;
+    background-color: rgba(212, 212, 212, 0.5490196078);
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2666666667));
+    transform-origin: center;
+    transform: perspective(800px) rotateY(25deg);
+    transition: 0.5s;
+    opacity: 0.4;
+    margin: 0 1em 0 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+  }
+  .cards img {
+    position: absolute;
+    z-index: 0;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2666666667));
+  }
+  .cards .footer--cards {
+    z-index: 5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 2.2em;
+    background-color: rgba(97, 97, 97, 0.6039215686);
+  }
+  .cards h1 {
+    font-size: 2em;
+    font-weight: bolder;
+    color: #616161;
+    align-self: center;
+  }
+  .container .cards:hover {
+    transform: perspective(800px) rotateY(0deg);
+    opacity: 1;
+  }
+  .belleepoque {
+    background: url("../images/belleepoque.webp");
+    background-position: center;
+    background-size: cover;
+  }
 }
-.cards img {
-  position: absolute;
-  z-index: 0;
-  -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2666666667));
-}
-.cards .footer--cards {
-  z-index: 5;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 2.2em;
-  background-color: rgba(97, 97, 97, 0.6039215686);
-}
-.cards h1 {
-  font-size: 2em;
-  font-weight: bolder;
-  color: #616161;
-  align-self: center;
-}
-
-.container .cards:hover {
-  transform: perspective(800px) rotateY(0deg);
-  opacity: 1;
-}
-
-.belleepoque {
-  background: url("../images/belleepoque.webp");
-  background-position: center;
-  background-size: cover;
-}
-
 .underline {
   position: relative;
   margin: 5px;
@@ -897,7 +1054,8 @@ select:-webkit-autofill:focus {
   .section--first {
     background: url("../images/bg-2.webp");
     background-position: center;
-    background-size: cover;
+    background-size: inherit;
+    background-repeat: no-repeat;
     display: flex;
   }
   .section--first aside {
@@ -977,7 +1135,8 @@ select:-webkit-autofill:focus {
   #contact .section--first {
     background: url("../images/bg-2.webp");
     background-position: center;
-    background-size: cover;
+    background-size: inherit;
+    background-repeat: no-repeat;
     justify-content: space-around;
     display: flex;
   }

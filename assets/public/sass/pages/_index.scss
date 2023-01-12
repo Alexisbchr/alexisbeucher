@@ -24,7 +24,8 @@
     .section--first{
         background: url("../images/bg-2.webp");
         background-position: center;
-        background-size: cover;
+        background-size: inherit;
+        background-repeat: no-repeat;
 
         display: flex;
         aside{

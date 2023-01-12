@@ -1,142 +1,312 @@
-    
+@media (min-width: 992px) { 
     ////////////////// FORMULAIRE //////////////////
-
-.formulaire{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding-left: 4em;
-    color: $primary;
-}
-form{
-    width: 100%;
-    
-    color: $primary;
-}
-                                    // STYLE TOOLBAR //
-.toolbar {
-    text-align: center;
-}
-
-                                    // STYLE FIELDSET //
-fieldset {
-    margin: 2em 0;
-    border-color:$primary;
-}
-
-legend {
-    text-align: center;
-    font-size: 1.3em;
-	width: 80%;
-    text-transform:uppercase;
-    margin: 1em;
-}
-
-                                    // STYLE FIELD //
-.field {
-    display: flex;
-    align-items: center;
-    padding: 0.5em;
-}
-
-.field label {
-    width: 30%;
-}
-
-.field .value {
-    width: 80%;
-        margin-right: 3%;
-}
-
-.field input {
-    width: 100%;
-}
-                                    // STYLE FIELD FOCUS //
-input:focus { 
-        outline: none !important;
-        border-bottom: 20px solid;
-        border-color: #719ECE;
-}
-textarea:focus { 
-    background-color: rgba(255, 255, 255, 0);
-        outline: none !important;
-        border-bottom: 4px solid;
-        border-color: #719ECE;
-}
-
-                                    // STYLE LABEL //
-label {
-        
-    padding: 0;
-}
-                                    // STYLE INPUT //
-
-input[type="text"],
-input[type="password"],
-input[type="search"],
-input[type="email"],
-input[type*="date"],
-select,
-object,
-option,
-textarea {
-    
-    color: $primary;
-    display: inline-block;
-        margin: 0.5em 0;
-        padding:0.3em;
-        border:0;
-        border-bottom: 1px solid $primary;
-    background-color: rgba(255, 255, 255, 0);
-        
-}
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="email"]:focus,
-input[type*="date"]:focus,
-select:focus,
-textarea:focus {
-        outline: none !important;
-        border-bottom: 3px solid;
-        border-color: $primary;
-        
-}
-object > option:focus{
-        outline: none !important;
-        border-bottom: 3px solid;
-        background-color: rgba(255, 255, 255, 0);
-        border-color: $primary;
-}
-select,
-textarea {
-    width: 100%;
-    color: $primary;
-        
-}
-textarea {
-    display: block;
-    
-    color: $primary;
-        background-color: rgba(255, 255, 255, 0);
-    min-height: 10em;
-}
-#query{
-        resize:vertical;
+    table{
+        width: 100%;
+        max-height: 60vh;
     }
-                /*////////////////// AUTOCOMPLETE //////////////////*/
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-        border-bottom: 3px solid;
-        border-color: $primary;
-        -webkit-text-fill-color: $primary;
-        -webkit-box-shadow: 0 0 0px 1000px rgba(29, 29, 29, 0) inset;
-        transition: background-color 5000s ease-in-out 0s;
+    tr,td{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4px;
+        
+        margin-top : 4px;
+        text-align: center;
+    }
+    label{
+        font-weight: bold;
+    }
+    .formulaire{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-left: 4em;
+        color: $primary;
+    }
+    form{
+        width: 100%;
+        
+        color: $primary;
+    }
+                                        // STYLE TOOLBAR //
+    .toolbar {
+        text-align: center;
+    }
+
+                                        // STYLE FIELDSET //
+    fieldset {
+        margin: 2em 0;
+        border-color:$primary;
+    }
+
+    legend {
+        text-align: center;
+        font-size: 1.3em;
+        width: 80%;
+        text-transform:uppercase;
+        margin: 1em;
+    }
+
+                                        // STYLE FIELD //
+    .field {
+        display: flex;
+        align-items: center;
+        padding: 0.5em;
+    }
+
+    .field label {
+        width: 30%;
+    }
+
+    .field .value {
+        width: 80%;
+            margin-right: 3%;
+    }
+
+    .field input {
+        width: 100%;
+    }
+                                        // STYLE FIELD FOCUS //
+    input:focus { 
+            outline: none !important;
+            border-bottom: 20px solid;
+            border-color: #719ECE;
+    }
+    textarea:focus { 
+        background-color: rgba(255, 255, 255, 0);
+            outline: none !important;
+            border-bottom: 4px solid;
+            border-color: #719ECE;
+    }
+
+                                        // STYLE LABEL //
+    label {
+            
+        padding: 0;
+    }
+                                        // STYLE INPUT //
+
+    input[type="text"],
+    input[type="password"],
+    input[type="search"],
+    input[type="email"],
+    input[type*="date"],
+    select,
+    object,
+    option,
+    textarea {
+        
+        color: $primary;
+        display: inline-block;
+            margin: 0.5em 0;
+            padding:0.3em;
+            border:0;
+            border-bottom: 1px solid $primary;
+        background-color: rgba(255, 255, 255, 0);
+            
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="search"]:focus,
+    input[type="email"]:focus,
+    input[type*="date"]:focus,
+    select:focus,
+    textarea:focus {
+            outline: none !important;
+            border-bottom: 3px solid;
+            border-color: $primary;
+            
+    }
+    object > option:focus{
+            outline: none !important;
+            border-bottom: 3px solid;
+            background-color: rgba(255, 255, 255, 0);
+            border-color: $primary;
+    }
+    select,
+    textarea {
+        width: 100%;
+        color: $primary;
+            
+    }
+    textarea {
+        display: block;
+        
+        color: $primary;
+            background-color: rgba(255, 255, 255, 0);
+        min-height: 10em;
+    }
+    #query{
+            resize:vertical;
+        }
+                    /*////////////////// AUTOCOMPLETE //////////////////*/
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+            border-bottom: 3px solid;
+            border-color: $primary;
+            -webkit-text-fill-color: $primary;
+            -webkit-box-shadow: 0 0 0px 1000px rgba(29, 29, 29, 0) inset;
+            transition: background-color 5000s ease-in-out 0s;
+    }
+}
+@media (max-width: 992px) {
+    table{
+        width: 100%;
+        max-height: 60vh;
+    }
+    tr,td{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4px;
+        
+        margin-top : 4px;
+        text-align: center;
+    }
+
+    .formulaire{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-left: 4em;
+        color: $primary;
+    }
+    form{
+        width: 100%;
+        
+        color: $primary;
+    }
+                                        // STYLE TOOLBAR //
+    .toolbar {
+        text-align: center;
+    }
+
+                                        // STYLE FIELDSET //
+    fieldset {
+        margin: 2em 0;
+        border-color:$primary;
+    }
+
+    legend {
+        text-align: center;
+        font-size: 1.3em;
+        width: 80%;
+        text-transform:uppercase;
+        margin: 1em;
+    }
+
+                                        // STYLE FIELD //
+    .field {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0.5em;
+    }
+
+    .field label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .field .value {
+        width: 100%;
+    }
+
+    .field input {
+        width: 100%;
+    }
+                                        // STYLE FIELD FOCUS //
+    input:focus { 
+            outline: none !important;
+            border-bottom: 20px solid;
+            border-color: #719ECE;
+    }
+    textarea:focus { 
+        background-color: rgba(255, 255, 255, 0);
+            outline: none !important;
+            border-bottom: 4px solid;
+            border-color: #719ECE;
+    }
+
+                                        // STYLE LABEL //
+    label{
+        font-weight: bold;
+    }
+    
+                                        // STYLE INPUT //
+
+    input[type="text"],
+    input[type="password"],
+    input[type="search"],
+    input[type="email"],
+    input[type*="date"],
+    select,
+    object,
+    option,
+    textarea {
+        
+        color: $primary;
+        display: inline-block;
+            margin: 0.5em 0;
+            padding:0.3em;
+            border:0;
+            border-bottom: 1px solid $primary;
+        background-color: rgba(255, 255, 255, 0);
+            
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="search"]:focus,
+    input[type="email"]:focus,
+    input[type*="date"]:focus,
+    select:focus,
+    textarea:focus {
+            outline: none !important;
+            border-bottom: 3px solid;
+            border-color: $primary;
+            
+    }
+    object > option:focus{
+            outline: none !important;
+            border-bottom: 3px solid;
+            background-color: rgba(255, 255, 255, 0);
+            border-color: $primary;
+    }
+    select,
+    textarea {
+        width: 100%;
+        color: $primary;
+            
+    }
+    textarea {
+        display: block;
+        
+        color: $primary;
+            background-color: rgba(255, 255, 255, 0);
+        min-height: 10em;
+    }
+    #query{
+            resize:vertical;
+        }
+                    /*////////////////// AUTOCOMPLETE //////////////////*/
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+            border-bottom: 3px solid;
+            border-color: $primary;
+            -webkit-text-fill-color: $primary;
+            -webkit-box-shadow: 0 0 0px 1000px rgba(29, 29, 29, 0) inset;
+            transition: background-color 5000s ease-in-out 0s;
+    }
 }
