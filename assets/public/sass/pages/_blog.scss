@@ -1,17 +1,23 @@
-#blog{
-    .first--article{
-        .news{
-            width: 100%;
-            height: auto;
-            border:1px solid white;
-            border-radius: 10px 10px 10px 10px;
-            padding: 1em;
-            margin: 1em;
-            .cards_li{
-                padding: 0.5em 0em;
-                margin: 0.5em 0em;
-                font-size: 1.1em;
+@media (min-width: 992px) {
+    #blog{
+
+        display: flex;
+        .first--article{
+            .news{
+                width: 100%;
+                height: auto;
+                border-bottom: 1px solid $primaryOpacity;
+                border-top: 1px solid $primaryOpacity;
+                border-radius: 10px 10px 10px 10px;
+                padding: 1em;
+                margin: 1em;
+                .cards_li{
+                    padding: 0.5em 0em;
+                    margin: 0.5em 0em;
+                    font-size: 1.1em;
+                }
             }
         }
     }
+    
 }

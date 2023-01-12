@@ -3,86 +3,87 @@
         <article class="first--article aside">
             
                 <ul class="cards__ul">
-                    <span class="work-details">Languages <li class="cards_li"><?= $work[0]['languages'];?></li></span>
-                    <span class="work-details">Catégorie <li class="cards_li"><?= $work[0]['category_name'];?></li></span>
-                    <span class="work-details">Description <li class="cards_li"><?= $work[0]['description'];?></li></span>
+                    <span class="work-details"><h2>Languages</h2> <li class="cards_li"><p><?= $work[0]['languages'];?></p></li></span>
+                    <span class="work-details"><h2>Catégorie</h2> <li class="cards_li"><p><?= $work[0]['category_name'];?></p></li></span>
+                    <span class="work-details"><h2>Description</h2> <li class="cards_li"><p><?= $work[0]['description'];?></p></li></span>
                 </ul>
         </article>
         <div class="tabs">
-      <div
-        role="tablist"
-        aria-label="tabs component"
-        class="tabs-btn-container"
-      >
-        <button
-          role="tab"
-          aria-controls="panel-1"
-          id="tab-1"
-          type="button"
-          aria-selected="true"
-          tabindex="0"
-          class="tab active-tab underline"
-        >
-          Présentation
-        </button>
-        <button
-          role="tab"
-          aria-controls="panel-2"
-          id="tab-2"
-          type="button"
-          aria-selected="false"
-          tabindex="-1"
-          class="tab underline"
-        >
-          La réalisation du site
-        </button>
-        <button
-          role="tab"
-          aria-controls="panel-3"
-          id="tab-3"
-          type="button"
-          aria-selected="false"
-          tabindex="-1"
-          class="tab underline"
-        >
-          Informations 
-        </button>
-      </div>
-      <div
-        id="panel-1"
-        role="tabpanel"
-        tabindex="0"
-        aria-labelledby="tab-1"
-        class="tab-content active-tab-content"
-      >
-        <p>
-        <?= $work[0]['description'];?>
-        </p>
-      </div>
+            <div
+                role="tablist"
+                aria-label="tabs component"
+                class="tabs-btn-container"
+            >
+                <button
+                role="tab"
+                aria-controls="panel-1"
+                id="tab-1"
+                type="button"
+                aria-selected="true"
+                tabindex="0"
+                class="tab active-tab underline"
+                >
+                Présentation
+                </button>
+                <button
+                role="tab"
+                aria-controls="panel-2"
+                id="tab-2"
+                type="button"
+                aria-selected="false"
+                tabindex="-1"
+                class="tab underline"
+                >
+                Réalisation
+                </button>
+                <button
+                role="tab"
+                aria-controls="panel-3"
+                id="tab-3"
+                type="button"
+                aria-selected="false"
+                tabindex="-1"
+                class="tab underline"
+                >
+                Informations 
+                </button>
+            </div>
+            <div
+                id="panel-1"
+                role="tabpanel"
+                tabindex="0"
+                aria-labelledby="tab-1"
+                class="tab-content active-tab-content"
+            >
+                <p>
+                <?= $work[0]['description'];?>
+                </p>
+            </div>
 
-      <div
-        id="panel-2"
-        role="tabpanel"
-        tabindex="0"
-        aria-labelledby="tab-2"
-        class="tab-content"
-      >
-        <p>
-        <?= $work[0]['realisation'];?>
-        </p>
-      </div>
+            <div
+                id="panel-2"
+                role="tabpanel"
+                tabindex="0"
+                aria-labelledby="tab-2"
+                class="tab-content"
+            >
+                <p>
+                <?= $work[0]['realisation'];?>
+                </p>
+            </div>
 
-      <div
-        id="panel-3"
-        role="tabpanel"
-        tabindex="0"
-        aria-labelledby="tab-3"
-        class="tab-content"
-      >
-        <p>
-            <?= $work[0]['information'];?>
-        </p>
-      </div>
-    </div>
+            <div
+                id="panel-3"
+                role="tabpanel"
+                tabindex="0"
+                aria-labelledby="tab-3"
+                class="tab-content"
+            >
+                <p>
+                    <?= $work[0]['information'];?>
+                </p>
+            </div>
+        </div>
+        <?php require './assets/views/includes/_aside.phtml'; ?>
     </section>
 </div>

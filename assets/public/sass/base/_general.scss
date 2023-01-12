@@ -22,7 +22,7 @@ html{
 .section{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     
     overflow-y: scroll;
@@ -32,9 +32,13 @@ html{
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
   }
-
+article{
+    margin-bottom: 3em;
+}
 h1,
 h2{
+    
+    text-transform: uppercase;
     margin: 1em 0;
     font-weight: bold;
 }
